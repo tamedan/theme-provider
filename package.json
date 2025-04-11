@@ -5,22 +5,37 @@
   "license": "MIT",
   "author": "Tamedan",
   "type": "module",
+  "main": "dist/index.js",
   "homepage": "https://github.com/tamedan/theme-provider-test",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tamedan/theme-provider-test.git"
   },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "ci": "npm run build",
+    "build": "tsup",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run lint && npm run test",
     "format": "prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check-format": "prettier --check .",
+    "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
+    "lint": "tsc",
+    "test": "vitest run",
+    "dev": "vitest"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.3"
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
   }
 }
