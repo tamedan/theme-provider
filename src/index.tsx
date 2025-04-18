@@ -1,8 +1,8 @@
-import { Context, createContext, JSX, useContext, useState } from 'react';
-import { TypePalette } from './TypePalette.js';
+import {  createContext,  useContext, useState } from 'react';
+// import { TypePalette } from './TypePalette';
 
 const ColorContext = createContext({
-  setTheme: (newTheme: TypePalette): void => {},
+  setTheme: (newTheme: any): void => {},
   mode: 'dark',
   palette: {
     primary: 'yellow',

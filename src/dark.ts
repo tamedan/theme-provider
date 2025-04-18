@@ -1,6 +1,6 @@
-import { TypePalette } from './TypePalette.js';
+// import { TypePalette } from './TypePalette.js';
 
-export const dark: TypePalette = {
+export const dark: any = {
   mode: 'dark',
   palette: {
     primary: 'black',

@@ -1,6 +1,6 @@
-import { TypePalette } from './TypePalette.js';
+// import { TypePalette } from './TypePalette.js';
 
-export const light: TypePalette = {
+export const light: any = {
   mode: 'light',
   palette: {
     primary: 'white',

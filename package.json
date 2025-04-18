@@ -6,10 +6,10 @@
   "author": "Tamedan",
   "type": "module",
   "main": "dist/index.js",
-  "homepage": "https://github.com/tamedan/theme-provider-test",
+  "homepage": "https://github.com/tamedan/theme-provider",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tamedan/theme-provider-test.git"
+    "url": "git+https://github.com/tamedan/theme-provider.git"
   },
   "exports": {
     "./package.json": "./package.json",
