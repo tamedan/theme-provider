@@ -6,6 +6,8 @@
     "skipLibCheck": true,
     "target": "es2022",
     "allowJs": true,
+    "checkJs": false,
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
